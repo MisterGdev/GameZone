@@ -1,0 +1,468 @@
+/* =============================================
+   STYLE.CSS - Capa de presentación
+   Tienda de videojuegos GameZone
+   ============================================= */
+
+
+/* ========== ESTILOS GENERALES ========== */
+
+/* Quitamos márgenes y padding por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* El padding no suma al ancho total del elemento */
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f1a; /* Fondo oscuro */
+    color: #e0e0e0;     /* Texto claro para contrastar con el fondo */
+    line-height: 1.6;  /* Espaciado entre líneas para mejor lectura */
+}
+
+
+/* ========== CABECERA ========== */
+
+/* Barra superior con logo y menú */
+header {
+    background-color: #1a1a2e;  /* Un poco más claro que el body */
+    padding: 15px 40px;
+    display: flex;    /* Ponemos logo y nav en la misma fila */
+    justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
+    align-items: center;    /* Centramos verticalmente */
+    position: sticky;        /* El menú se queda fijo al hacer scroll */
+    top: 0;
+    z-index: 100;  /* Que quede por encima de todo lo demás */
+    border-bottom: 2px solid #7c3aed; /* Línea morada decorativa */
+}
+
+/* Contenedor del logo */
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;           /* Espacio entre el icono y el texto */
+}
+
+/* Icono del logo */
+#logo-icono {
+    font-size: 32px;
+}
+
+/* Texto del logo */
+#logo-texto {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7c3aed;   /* Color morado para el nombre de la tienda */
+    letter-spacing: 2px;
+}
+
+/* Estilos de los enlaces del menú de navegación */
+nav a {
+    color: #e0e0e0;
+    text-decoration: none; /* Sin subrayado */
+    margin-left: 25px;
+    font-size: 15px;
+    transition: color 0.3s; /* Transicion al hover */
+}
+
+/* Efecto hover en los enlaces del menú */
+nav a:hover {
+    color: #7c3aed;   /* Se ponen morados al pasar el ratón */
+}
+
+
+/* ========== SECCIONES GENERALES ========== */
+
+/* Todas las secciones tienen el mismo padding y separación */
+section {
+    padding: 60px 40px;
+    max-width: 1100px;  /* Ancho máximo para que no se estire en pantallas grandes */
+    margin: 0 auto;   /* Centramos la sección horizontalmente */
+}
+
+/* Títulos de sección (h2) */
+section h2 {
+    font-size: 28px;
+    color: #7c3aed;
+    margin-bottom: 20px;
+    border-left: 5px solid #7c3aed; /* Línea decorativa a la izquierda */
+    padding-left: 12px;
+}
+
+
+/* ========== SECCIÓN INICIO ========== */
+
+/* Título principal grande */
+#inicio h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Párrafo de bienvenida */
+#inicio p {
+    font-size: 18px;
+    color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+/* Imagen grande de la sección inicio */
+.imagen-hero {
+    width: 100%;  /* Ocupa todo el ancho disponible */
+    max-height: 400px;
+    object-fit: cover;   /* La imagen se recorta sin deformarse */
+    border-radius: 12px;
+    border: 2px solid #7c3aed;
+}
+
+
+/* ========== SECCIÓN CATÁLOGO ========== */
+
+/* Subtítulo de cada categoría dentro del catálogo (Juegos, Accesorios, Merchandising) */
+.subtitulo-catalogo {
+    color: #e0e0e0;/* Más claro que el h2 */
+    font-size: 18px;
+    margin-top: 35px;/* Separación respecto al bloque anterior */
+    margin-bottom: 15px;
+    padding-left: 8px;
+    border-left: 3px solid #4a1d96; /* Línea más fina y oscura que la del h2 */
+}
+
+/* Contenedor de las tarjetas: */
+#contenedor-juegos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 25px;  /* Espacio entre tarjetas */
+    margin-top: 20px;
+}
+
+/* Cada tarjeta de juego */
+.tarjeta-juego {
+    background-color: #1a1a2e;
+    border: 1px solid #7c3aed;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;  /* Transición al hover */
+}
+
+/* La tarjeta sube un poco al pasar el ratón */
+.tarjeta-juego:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen dentro de cada tarjeta */
+.imagen-juego {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Nombre del juego en la tarjeta */
+.tarjeta-juego h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Descripción del juego */
+.tarjeta-juego p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Precio del juego */
+.precio {
+    color: #7c3aed;
+    font-weight: bold;
+    font-size: 18px !important; /* Forzamos que sea más grande que el párrafo normal */
+}
+
+
+/* ========== SECCIÓN CALCULADORA ========== */
+
+/* Formulario de la calculadora */
+#formulario-calculadora {
+    background-color: #1a1a2e;
+    border: 1px solid #7c3aed;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px; /* No muy ancho para que quede centrado */
+    display: flex;
+    flex-direction: column; /* Los elementos se apilan en columna */
+    gap: 12px;   /* Espacio entre cada elemento del formulario */
+    margin-top: 20px;
+}
+
+/* Etiquetas de los campos del formulario */
+#formulario-calculadora label {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* Desplegables (select) e inputs del formulario */
+#formulario-calculadora select,
+#formulario-calculadora input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #7c3aed;
+    background-color: #0f0f1a;  /* Mismo fondo que el body */
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+/* Botón de calcular */
+#boton-calcular {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* El cursor se convierte en manita al pasar por encima */
+    transition: background-color 0.3s;
+    margin-top: 8px;
+}
+
+/* Efecto hover en el botón de calcular */
+#boton-calcular:hover {
+    background-color: #6d28d9;
+}
+
+/* Botón de añadir al carrito */
+#boton-añadir {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 8px;
+}
+
+#boton-añadir:hover {
+    background-color: #6d28d9;
+}
+
+/* Bloque del carrito */
+#carrito {
+    margin-top: 30px;
+    background-color: #1a1a2e;
+    border: 1px solid #7c3aed;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 500px;
+    display: none; /* Oculto hasta que haya artículos */
+}
+
+/* Título "Tu carrito" */
+#carrito h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Cada fila de artículo dentro del carrito */
+.linea-carrito {
+    display: flex;   /* Ponemos el texto y el botón en la misma fila */
+    justify-content: space-between; /* Texto a la izquierda, botón a la derecha */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #2a2a4a; /* Línea separadora entre artículos */
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+/* Botón de eliminar dentro de cada línea del carrito */
+.boton-eliminar {
+    background-color: #7f1d1d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s;
+}
+
+.boton-eliminar:hover {
+    background-color: #991b1b;
+}
+
+/* Botones de la parte inferior del carrito */
+#boton-calcular {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#boton-calcular:hover {
+    background-color: #6d28d9;
+}
+
+#boton-vaciar {
+    background-color: #374151;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+#boton-vaciar:hover {
+    background-color: #4b5563;
+}
+
+/* Cuadro donde se muestra el resultado final con IVA */
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a2e;
+    border-left: 4px solid #7c3aed;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #e0e0e0;
+    max-width: 500px;
+    display: none;   /* Empieza oculto, se muestra al calcular */
+}
+
+
+/* ========== SECCIÓN CONTACTO ========== */
+
+/* Formulario de contacto */
+#formulario-contacto {
+    background-color: #1a1a2e;
+    border: 1px solid #7c3aed;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Etiquetas del formulario de contacto */
+#formulario-contacto label {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* Inputs, email y textarea del formulario de contacto */
+#formulario-contacto input,
+#formulario-contacto textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #7c3aed;
+    background-color: #0f0f1a;
+    color: #e0e0e0;
+    font-size: 15px;
+    font-family: inherit; /* Heredamos la fuente del body */
+    resize: vertical;  /* El textarea solo se puede redimensionar verticalmente */
+}
+
+/* Botón de enviar del formulario de contacto */
+#boton-contacto {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 8px;
+}
+
+/* Efecto hover del botón de contacto */
+#boton-contacto:hover {
+    background-color: #6d28d9;
+}
+
+/* Mensaje de confirmación que aparece tras enviar el formulario */
+#confirmacion-contacto {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #1a3a1a;
+    border-left: 4px solid #27ae60;
+    border-radius: 8px;
+    color: #27ae60;
+    display: none;   /* Empieza oculto, se muestra al enviar */
+}
+
+
+/* ========== PIE DE PÁGINA ========== */
+
+footer {
+    background-color: #1a1a2e;
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    border-top: 2px solid #7c3aed;
+    margin-top: 40px;
+}
+
+
+/* ========== RESPONSIVE (móviles) ========== */
+/* Esta parte hace que la web se adapte a pantallas pequeñas */
+
+/* Para pantallas menores de 768px (tablets y móviles) */
+@media (max-width: 768px) {
+
+    /* El header se pone en columna en vez de fila */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    /* Los enlaces del menú se juntan más */
+    nav a {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+
+    /* Las secciones tienen menos padding lateral */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* El título principal se hace más pequeño */
+    #inicio h1 {
+        font-size: 28px;
+    }
+
+    /* Las tarjetas pasan a 1 columna en móvil */
+    #contenedor-juegos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Para pantallas entre 768px y 1024px (tablets grandes) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Las tarjetas pasan a 2 columnas en tablet */
+    #contenedor-juegos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

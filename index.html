@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Esto hace que la web se vea bien en móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>GameZone - Tienda de Videojuegos</title>
+
+    <!-- Enlazamos el fichero CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <!-- Logo y nombre de la tienda -->
+        <div id="logo">
+            <span id="logo-icono">🎮</span>
+            <span id="logo-texto">GameZone</span>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- ========== INICIO ========== -->
+    <section id="inicio">
+        <!-- Título principal de bienvenida -->
+        <h1>Bienvenido a GameZone</h1>
+        <p>Tu tienda de videojuegos de confianza. Los mejores títulos al mejor precio.</p>
+
+        <!-- Imagen decorativa de la sección inicio -->
+        <img src="portada.jfif"
+             alt="Imagen de portada"
+             class="imagen-hero">
+    </section>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section id="catalogo">
+        <h2>Nuestro Catálogo</h2>
+
+        <!-- ===== JUEGOS ===== -->
+        <h3 class="subtitulo-catalogo">🎮 Juegos</h3>
+        <div id="contenedor-juegos">
+
+            <!-- Tarjeta juego 1 -->
+            <div class="tarjeta-juego">
+                <img src="https://estaticos-cdn.prensaiberica.es/clip/b7094343-2837-401d-8dad-c7e3d3251484_16-9-discover-aspect-ratio_default_0.jpg"
+                     class="imagen-juego">
+                <h3>GTA 6</h3>
+                <p>Vuelve a Vice City. El mundo abierto más grande y ambicioso de Rockstar Games.</p>
+                <p class="precio">79,99 €</p>
+            </div>
+
+            <!-- Tarjeta juego 2 -->
+            <div class="tarjeta-juego">
+                <img src="https://areajugones.sport.es/wp-content/uploads/2022/05/forza-horizon-6.jpg"
+                     alt="Forza Horizon 6"
+                     class="imagen-juego">
+                <h3>Forza Horizon 6</h3>
+                <p>El simulador de carreras definitivo. Cientos de coches en escenarios espectaculares.</p>
+                <p class="precio">69,99 €</p>
+            </div>
+
+            <!-- Tarjeta juego 3 -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&q=80"
+                     alt="Cookie Clicker"
+                     class="imagen-juego">
+                <h3>Cookie Clicker</h3>
+                <p>Haz clic. Produce galletas. Conquista el universo. El idle game más adictivo de la historia.</p>
+                <p class="precio">4,99 €</p>
+            </div>
+
+            <!-- Tarjeta juego 4 -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&q=80"
+                     alt="Pack de juegos indie"
+                     class="imagen-juego">
+                <h3>Indie Pack</h3>
+                <p>Colección de los mejores juegos independientes del año.</p>
+                <p class="precio">29,99 €</p>
+            </div>
+
+            <!-- Tarjeta juego 5 -->
+            <div class="tarjeta-juego">
+                <img src="https://i.redd.it/yp0ad5n6swia1.jpg"
+                     alt="Minecraft"
+                     class="imagen-juego">
+                <h3>Minecraft</h3>
+                <p>Construye, explora y sobrevive en un mundo de bloques sin límites.</p>
+                <p class="precio">29,99 €</p>
+            </div>
+
+        </div>
+
+        <!-- ===== ACCESORIOS ===== -->
+        <h3 class="subtitulo-catalogo">🕹️ Accesorios</h3>
+        <div id="contenedor-juegos">
+
+            <!-- Tarjeta: Mando inalámbrico -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400&q=80"
+                     alt="Mando inalámbrico"
+                     class="imagen-juego">
+                <h3>Mando Inalámbrico Pro</h3>
+                <p>Compatible con PC, PS5 y Xbox. Batería de 20 horas de autonomía.</p>
+                <p class="precio">69,99 €</p>
+            </div>
+
+            <!-- Tarjeta: Pantalla -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&q=80"
+                     alt="Pantalla gaming"
+                     class="imagen-juego">
+                <h3>Pantalla Gaming 27" 144Hz</h3>
+                <p>Panel IPS Full HD con 1ms de latencia. Ideal para competición.</p>
+                <p class="precio">299,99 €</p>
+            </div>
+
+            <!-- Tarjeta: Teclado -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&q=80"
+                     alt="Teclado mecánico"
+                     class="imagen-juego">
+                <h3>Teclado Mecánico RGB</h3>
+                <p>Switches Cherry MX Red. Retroiluminación RGB personalizable.</p>
+                <p class="precio">89,99 €</p>
+            </div>
+
+            <!-- Tarjeta: Cascos -->
+            <div class="tarjeta-juego">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80"
+                     alt="Cascos gaming con micrófono"
+                     class="imagen-juego">
+                <h3>Cascos Gaming con Micrófono</h3>
+                <p>Sonido envolvente 7.1. Micrófono con cancelación de ruido.</p>
+                <p class="precio">79,99 €</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========== CALCULADORA (carrito) ========== -->
+    <section id="calculadora">
+        <h2>Carrito de Compra</h2>
+        <p>Añade artículos al carrito y calcula el total cuando quieras.</p>
+
+        <!-- Formulario para añadir artículos al carrito -->
+        <!-- onsubmit llama a añadirAlCarrito() en vez de calcular directamente -->
+        <form id="formulario-calculadora" onsubmit="añadirAlCarrito(event)">
+
+            <!-- Selector del producto -->
+            <!-- El valor de cada opcion es el precio que JS leerá para calcular -->
+            <label for="juego">Elige tu producto:</label>
+            <select id="juego">
+
+                <!-- ===== JUEGOS ===== -->
+                <!-- optgroup agrupa las opciones con una etiqueta visual, no es seleccionable -->
+                <optgroup label="🎮 Juegos">
+                    <option value="79.99">GTA 6 - 79,99 €</option>
+                    <option value="69.99">Forza Horizon 6 - 69,99 €</option>
+                    <option value="4.99">Cookie Clicker - 4,99 €</option>
+                    <option value="29.99">Indie Pack - 29,99 €</option>
+                    <option value="29.99">Minecraft - 29,99 €</option>
+                </optgroup>
+
+                <!-- ===== ACCESORIOS ===== -->
+                <optgroup label="🕹️ Accesorios">
+                    <!-- Mando inalámbrico -->
+                    <option value="69.99">Mando Inalámbrico Pro - 69,99 €</option>
+                    <!-- Pantalla gaming -->
+                    <option value="299.99">Pantalla Gaming 27" 144Hz - 299,99 €</option>
+                    <!-- Teclado mecánico -->
+                    <option value="89.99">Teclado Mecánico RGB - 89,99 €</option>
+                    <!-- Cascos con micrófono -->
+                    <option value="79.99">Cascos Gaming con Micrófono - 79,99 €</option>
+                </optgroup>
+
+            </select>
+
+            <!-- Input para la cantidad de unidades -->
+            <label for="cantidad">Cantidad de unidades:</label>
+            <input type="number" id="cantidad" min="1" value="1" placeholder="Ej: 2">
+
+            <!-- Bloque de plataforma: el div envuelve label y select juntos -->
+            <!-- Solo se muestra si el producto es un juego -->
+            <div id="bloque-plataforma">
+                <label for="plataforma">Plataforma:</label>
+                <select id="plataforma">
+                    <option value="ps5">PlayStation 5</option>
+                    <option value="xbox">Xbox Series X</option>
+                    <option value="pc">PC (Steam)</option>
+                    <option value="switch">Nintendo Switch</option>
+                </select>
+            </div>
+
+            <!-- Botón para añadir la línea al carrito (no calcula todavía) -->
+            <button type="submit" id="boton-añadir">🛒 Añadir al carrito</button>
+
+        </form>
+
+        <!-- ===== CARRITO ===== -->
+        <!-- Se muestra cuando hay artículos en el carrito -->
+        <div id="carrito">
+
+            <h3>Tu carrito</h3>
+
+            <!-- Se añade una fila por cada artículo -->
+            <div id="lista-carrito"></div>
+
+            <!-- Botón para calcular el total de todo el carrito -->
+            <!-- Solo aparece cuando hay artículos dentro -->
+            <button id="boton-calcular" onclick="calcularTotal()">Calcular precio total</button>
+
+            <!-- Botón para vaciar el carrito entero de golpe -->
+            <button id="boton-vaciar" onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
+
+        </div>
+
+        <!-- Empieza oculto, se muestra al pulsar "Calcular precio total" -->
+        <div id="resultado"></div>
+
+    </section>
+
+    <!-- ========== SECCIÓN CONTACTO ========== -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna duda? Escríbenos y te respondemos en 24 horas.</p>
+
+        <!-- Formulario de contacto -->
+        <!-- onsubmit llama a la función JS que muestra el mensaje de confirmación -->
+        <form id="formulario-contacto" onsubmit="enviarContacto(event)">
+
+            <!-- Campo nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+            <!-- Campo email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="tucorreo@email.com" required>
+
+            <!-- Campo mensaje -->
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <!-- Botón de envío -->
+            <button type="submit" id="boton-contacto">Enviar mensaje</button>
+
+        </form>
+
+        <!-- Aquí JS escribirá el mensaje de confirmación del formulario -->
+        <div id="confirmacion-contacto"></div>
+
+    </section>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <p>© 2026 GameZone - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Enlazamos el fichero JS externo -->
+    <!-- Se pone AL FINAL del body para que el HTML cargue antes que el JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
