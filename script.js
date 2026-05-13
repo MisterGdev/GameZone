@@ -72,8 +72,11 @@ function añadirAlCarrito(event) {
     var plataforma = selectPlataforma.options[selectPlataforma.selectedIndex].text;
 
     // Validamos que la cantidad sea un número válido y mayor que 0
-    // isNaN() devuelve true si el valor NO es un número
-    if (isNaN(cantidad) || cantidad <= 0) {
+    // Number() convierte el valor a número de forma estricta
+    // Number.isFinite() devuelve false si el resultado es NaN, Infinity o no es un número real
+    // Esto es más seguro que isNaN(), que tiene comportamientos extraños con arrays y otros valores
+    var num = Number(cantidad);
+    if (!Number.isFinite(num) || num <= 0) {
         alert('Por favor, introduce una cantidad válida.');
         return; // Salimos sin añadir nada al carrito
     }
