@@ -17,8 +17,38 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0f0f1a; /* Fondo oscuro */
-    color: #e0e0e0;     /* Texto claro para contrastar con el fondo */
+    color: #f3f4f6;     /* Texto claro corregido para contrastar con el fondo (WCAG AA) */
     line-height: 1.6;  /* Espaciado entre líneas para mejor lectura */
+}
+
+/* Enlace directo oculto para usuarios de teclado (WCAG 2.4.1) */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    background-color: #7c3aed;
+    color: #ffffff;
+    padding: 10px 16px;
+    z-index: 1000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 15px;
+    outline: 3px solid #38bdf8;
+}
+
+/* Indicador global de foco visible para teclado (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
 }
 
 
@@ -53,13 +83,13 @@ header {
 #logo-texto {
     font-size: 24px;
     font-weight: bold;
-    color: #7c3aed;   /* Color morado para el nombre de la tienda */
+    color: #a78bfa;   /* Morado claro ajustado para accesibilidad y contraste */
     letter-spacing: 2px;
 }
 
 /* Estilos de los enlaces del menú de navegación */
 nav a {
-    color: #e0e0e0;
+    color: #f3f4f6;
     text-decoration: none; /* Sin subrayado */
     margin-left: 25px;
     font-size: 15px;
@@ -68,7 +98,7 @@ nav a {
 
 /* Efecto hover en los enlaces del menú */
 nav a:hover {
-    color: #7c3aed;   /* Se ponen morados al pasar el ratón */
+    color: #a78bfa;   /* Se ponen morados al pasar el ratón */
 }
 
 
@@ -84,7 +114,7 @@ section {
 /* Títulos de sección (h2) */
 section h2 {
     font-size: 28px;
-    color: #7c3aed;
+    color: #a78bfa;
     margin-bottom: 20px;
     border-left: 5px solid #7c3aed; /* Línea decorativa a la izquierda */
     padding-left: 12px;
@@ -103,7 +133,7 @@ section h2 {
 /* Párrafo de bienvenida */
 #inicio p {
     font-size: 18px;
-    color: #aaaaaa;
+    color: #d1d5db; /* Gris claro corregido con ratio de contraste > 7:1 */
     margin-bottom: 30px;
 }
 
@@ -121,16 +151,16 @@ section h2 {
 
 /* Subtítulo de cada categoría dentro del catálogo (Juegos, Accesorios, Merchandising) */
 .subtitulo-catalogo {
-    color: #e0e0e0;/* Más claro que el h2 */
+    color: #ffffff;/* Más claro que el h2 para accesibilidad */
     font-size: 18px;
     margin-top: 35px;/* Separación respecto al bloque anterior */
     margin-bottom: 15px;
     padding-left: 8px;
-    border-left: 3px solid #4a1d96; /* Línea más fina y oscura que la del h2 */
+    border-left: 3px solid #7c3aed; /* Línea de separación decorativa */
 }
 
-/* Contenedor de las tarjetas: */
-#contenedor-juegos {
+/* Contenedor de las tarjetas (ahora clase para evitar id duplicado): */
+.contenedor-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
     gap: 25px;  /* Espacio entre tarjetas */
@@ -161,21 +191,21 @@ section h2 {
 }
 
 /* Nombre del juego en la tarjeta */
-.tarjeta-juego h3 {
+.tarjeta-juego h4 {
     color: #ffffff;
     margin-bottom: 8px;
 }
 
 /* Descripción del juego */
 .tarjeta-juego p {
-    color: #aaaaaa;
+    color: #d1d5db; /* Corregido contraste para superar ratio 4.5:1 */
     font-size: 14px;
     margin-bottom: 8px;
 }
 
 /* Precio del juego */
 .precio {
-    color: #7c3aed;
+    color: #a78bfa;
     font-weight: bold;
     font-size: 18px !important; /* Forzamos que sea más grande que el párrafo normal */
 }
@@ -198,7 +228,7 @@ section h2 {
 
 /* Etiquetas de los campos del formulario */
 #formulario-calculadora label {
-    color: #aaaaaa;
+    color: #f3f4f6; /* Color accesible de alto contraste */
     font-size: 14px;
 }
 
@@ -209,27 +239,8 @@ section h2 {
     border-radius: 6px;
     border: 1px solid #7c3aed;
     background-color: #0f0f1a;  /* Mismo fondo que el body */
-    color: #e0e0e0;
+    color: #f3f4f6;
     font-size: 15px;
-}
-
-/* Botón de calcular */
-#boton-calcular {
-    background-color: #7c3aed;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer; /* El cursor se convierte en manita al pasar por encima */
-    transition: background-color 0.3s;
-    margin-top: 8px;
-}
-
-/* Efecto hover en el botón de calcular */
-#boton-calcular:hover {
-    background-color: #6d28d9;
 }
 
 /* Botón de añadir al carrito */
@@ -275,7 +286,7 @@ section h2 {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #2a2a4a; /* Línea separadora entre artículos */
-    color: #e0e0e0;
+    color: #f3f4f6;
     font-size: 15px;
 }
 
@@ -338,7 +349,7 @@ section h2 {
     border-left: 4px solid #7c3aed;
     border-radius: 8px;
     font-size: 16px;
-    color: #e0e0e0;
+    color: #f3f4f6;
     max-width: 500px;
     display: none;   /* Empieza oculto, se muestra al calcular */
 }
@@ -361,7 +372,7 @@ section h2 {
 
 /* Etiquetas del formulario de contacto */
 #formulario-contacto label {
-    color: #aaaaaa;
+    color: #f3f4f6; /* Color accesible de alto contraste */
     font-size: 14px;
 }
 
@@ -372,7 +383,7 @@ section h2 {
     border-radius: 6px;
     border: 1px solid #7c3aed;
     background-color: #0f0f1a;
-    color: #e0e0e0;
+    color: #f3f4f6;
     font-size: 15px;
     font-family: inherit; /* Heredamos la fuente del body */
     resize: vertical;  /* El textarea solo se puede redimensionar verticalmente */
@@ -401,10 +412,10 @@ section h2 {
 #confirmacion-contacto {
     margin-top: 15px;
     padding: 15px;
-    background-color: #1a3a1a;
-    border-left: 4px solid #27ae60;
+    background-color: #143521;
+    border-left: 4px solid #4ade80;
     border-radius: 8px;
-    color: #27ae60;
+    color: #bbf7d0;   /* Color ajustado para alto contraste sobre fondo verde oscuro */
     display: none;   /* Empieza oculto, se muestra al enviar */
 }
 
@@ -415,7 +426,7 @@ footer {
     background-color: #1a1a2e;
     text-align: center;
     padding: 20px;
-    color: #555;
+    color: #cbd5e1; /* Corregido de #555 para cumplir WCAG AA */
     border-top: 2px solid #7c3aed;
     margin-top: 40px;
 }
@@ -451,7 +462,7 @@ footer {
     }
 
     /* Las tarjetas pasan a 1 columna en móvil */
-    #contenedor-juegos {
+    .contenedor-grid {
         grid-template-columns: 1fr;
     }
 
@@ -461,7 +472,7 @@ footer {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     /* Las tarjetas pasan a 2 columnas en tablet */
-    #contenedor-juegos {
+    .contenedor-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 

@@ -137,10 +137,11 @@ function actualizarVistaCarrito() {
 
         // Escribimos el HTML de la línea con los datos del artículo
         // El botón de eliminar llama a eliminarArticulo(i) pasándole el índice
+        // Se añade aria-label para accesibilidad en lectores de pantalla (WCAG 4.1.2)
         linea.innerHTML =
             '<span>' + carrito[i].nombre + ' · ' + carrito[i].plataforma +
             ' · x' + carrito[i].cantidad + ' · ' + subtotal + ' €</span>' +
-            '<button class="boton-eliminar" onclick="eliminarArticulo(' + i + ')">✕ Eliminar</button>';
+            '<button class="boton-eliminar" aria-label="Eliminar ' + carrito[i].nombre + '" onclick="eliminarArticulo(' + i + ')">✕ Eliminar</button>';
 
         // Añadimos la línea al div del carrito
         listaCarrito.appendChild(linea);
@@ -227,7 +228,7 @@ function calcularTotal() {
         '<hr style="border-color:#7c3aed; margin:10px 0;">' +
         '<p><strong>Precio base:</strong> ' + precioBaseFormateado + ' €</p>' +
         '<p><strong>IVA (21%):</strong> ' + importeIvaFormateado + ' €</p>' +
-        '<p style="font-size:20px; color:#7c3aed; font-weight:bold;">TOTAL: ' + precioTotalFormateado + ' €</p>';
+        '<p style="font-size:20px; color:#a78bfa; font-weight:bold;">TOTAL: ' + precioTotalFormateado + ' €</p>';
 
     // Mostramos el div resultado y escribimos el desglose dentro
     document.getElementById('resultado').style.display = 'block';
